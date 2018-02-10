@@ -29,6 +29,9 @@ import Footer from './layout/footer.jsx'
 // console.log(Header.__docs)
 
 export default {
+  metaInfo: {
+    title: 'Jokcy\'s Todo App'
+  },
   components: {
     Header,
     Footer

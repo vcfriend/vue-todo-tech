@@ -7,8 +7,8 @@ export default [
     redirect: '/app'
   },
   {
-    path: '/app/:id', // /app/xxx
-    // path: '/app', // /app/xxx
+    // path: '/app/:id', // /app/xxx
+    path: '/app',
     props: true,
     // props: (route) => ({ id: route.query.b }),
     component: () => import('../views/todo/todo.vue'),
