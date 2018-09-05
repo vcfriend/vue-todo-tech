@@ -21,6 +21,12 @@ const devServer = {
   overlay: {
     errors: true
   },
+  headers: { 'Access-Control-Allow-Origin': '*' },
+  // 这里添加的配置,网页不显示目录结构了,但控制台报错:
+  // Failed to load resource: net::ERR_CONNECTION_REFUSED
+  historyApiFallback: {
+    index: '/public/index.html'
+  },
   hot: true
 }
 
