@@ -1,6 +1,6 @@
 // import './instance/index2'
-import './lifecycle/index2'
-// import './data-binding'
+// import './lifecycle/index2'
+import './data-binding/index2'
 // import './computed'
 // import './directive'
 // import './component'
