@@ -1,5 +1,5 @@
-import './instance/index2'
-// import './lifecycle'
+// import './instance/index2'
+import './lifecycle/index2'
 // import './data-binding'
 // import './computed'
 // import './directive'
