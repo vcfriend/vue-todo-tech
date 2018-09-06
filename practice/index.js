@@ -1,4 +1,4 @@
-import './instance'
+import './instance/index2'
 // import './lifecycle'
 // import './data-binding'
 // import './computed'
