@@ -69,7 +69,7 @@ new Vue({
       <comp-one ref="comp">
       // slot-scope显示是组件内的变量值
         <span slot-scope="props" ref="span">{{props.value}} {{props.aaa1}} {{value}}</span>
-      </comp-one>
+      </comp-one> 
       <input type="text" v-model="value"/>
     </div>
   `
