@@ -4,19 +4,26 @@ const CompOne = {
   // 实现组件属性双向梆定,添加要梆定的值和触发的事件
   // 使用model修改v-model梆定的名称
   model: {
-    prop: ['value1'],
-    event: 'input2'
+    prop: ['compOnePropValue1'],
+    event: 'inputEvent2'
   },
-  props: ['value1'],
+  props: ['compOnePropValue1', 'myMessage'],
   template: `
     <div>
-      <input type="text" @input="handleInput" :value="value1">
+      <span>子组件 myMessage: </span>
+      <input type="text" :value="myMessage">
+      <input type="text" @input="handleInput" :value="compOnePropValue1">
     </div>
   `,
   methods: {
     handleInput (e) {
       console.log('e.target.value', e.target.value)
-      this.$emit('input2', e.target.value)
+      this.$emit('inputEvent2', e.target.value)
+    }
+  },
+  data () {
+    return {
+      compOneValue1: '222'
     }
   }
 }
@@ -28,12 +35,13 @@ new Vue({
   el: '#root',
   data () {
     return {
-      value: '123'
+      rootValue: '123'
     }
   },
   template: `
     <div>
-      <comp-one v-model="value"></comp-one>
+      <span>父组件 {{rootValue}}</span>
+      <comp-one v-model="rootValue" :my-message="rootValue"></comp-one>
     </div>
   `
 })
